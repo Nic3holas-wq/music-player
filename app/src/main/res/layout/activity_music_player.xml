@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/music_player_activity"
+    android:background="@color/primary_color"
+    tools:context=".MusicPlayerActivity">
+
+    <ImageView
+        android:id="@+id/go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="60dp"
+        android:src="@drawable/back"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/song_title"
+        android:text="Title of the Song"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:padding="20dp"/>
+
+    <TextView
+        android:id="@+id/release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/song_title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp"
+        android:text=" Release Date: Jan 2022"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="150dp"
+    android:id="@+id/lyrics_song">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:id="@+id/music_icon_big"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:src="@drawable/rotate_audio"/>
+
+    <TextView
+        android:id="@+id/lyrics"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/music_icon_big"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:lines="6"
+        android:text="You are here, moving in our midst, I worship you, I worship You."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/lyrics_song">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/favorite_add"
+            android:id="@+id/like"
+            android:layout_marginStart="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:padding="10dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/list"
+            android:id="@+id/playlist"
+            android:layout_marginStart="100dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:padding="10dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/equaliser"
+            android:id="@+id/equaliser"
+            android:layout_centerInParent="true"
+            android:padding="10dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/list_add"
+            android:id="@+id/list_add"
+            android:layout_marginEnd="100dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more_vertical"
+            android:id="@+id/more"
+            android:layout_marginEnd="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/controls"
+        android:layout_alignParentBottom="true"
+        android:padding="40dp">
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seek_bar"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/white" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/current_time"
+        android:layout_marginTop="10dp"
+        android:text="0:00"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/white"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/total_time"
+        android:layout_marginTop="10dp"
+        android:text="0:00"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white"
+        android:layout_margin="20dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_time"
+            android:padding="10dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shuffle"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+
+                android:id="@+id/shuffle"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/skip_prev"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="40dp"
+                android:id="@+id/previous"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/skip_next"
+                android:layout_marginEnd="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/next"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/repeat"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+
+                android:id="@+id/repeat"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pause"
+                android:layout_centerInParent="true"
+                android:id="@+id/pause_play"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:padding="12dp"
+    android:layout_marginTop="40dp"
+    android:layout_marginVertical="4dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/queue"
+        android:src="@drawable/queue"
+        android:padding="5dp"
+        android:background="@color/primary_color"
+        android:layout_alignParentStart="true"/>
+
+    <!-- Playlist title -->
+   <TextView
+    android:id="@+id/playlistTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Playlist Title"
+    android:textColor="@color/white"
+    android:textSize="18sp"
+       android:layout_marginTop="10dp"
+    android:textStyle="normal"
+    android:paddingStart="8dp"
+       android:layout_marginStart="60dp"
+    android:paddingEnd="8dp" />
+    </RelativeLayout>

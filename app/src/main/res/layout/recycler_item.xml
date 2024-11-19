@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EFEFEF"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:id="@+id/icon_view"
+        android:src="@drawable/ic_album"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/music_title_text"
+        android:layout_toEndOf="@id/icon_view"
+        android:layout_toStartOf="@id/music_duration_text"
+        android:layout_alignParentTop="true"
+        android:text="Music Title"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/music_duration_text"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="3:45"
+        android:textColor="@color/black"
+        android:paddingEnd="10dp"/>
+
+    <!-- Artist Name TextView -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/music_artist_text"
+        android:layout_below="@id/music_duration_text"
+        android:layout_alignParentEnd="true"
+        android:text="Artist Name"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

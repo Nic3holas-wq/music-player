@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/songs_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:text="Musicx"
+        android:textColor="@color/primary_color"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="visible"/>
+
+
+    <SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search for a song"
+        android:iconifiedByDefault="false"
+        android:visibility="gone"
+        android:layout_toEndOf="@id/search_icon"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp" />
+
+    <!-- No Songs Text -->
+    <TextView
+        android:id="@+id/no_songs_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="NO SONGS FOUND"
+        android:textColor="@color/design_default_color_error"
+        android:visibility="gone" />
+
+    <!-- Search Icon (Trigger for Search Bar) -->
+    <ImageView
+        android:id="@+id/search_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_toStartOf="@+id/setting_icon"
+        android:clickable="true"
+        android:contentDescription="search icon"
+        android:src="@drawable/search_black" />
+
+    <!-- Settings Icon -->
+    <ImageView
+        android:id="@+id/setting_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/settings"
+        android:visibility="visible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playlistLink"
+        android:text="PlayLists"
+        android:textSize="20sp"
+        android:textColor="@color/primary_color"
+        android:textStyle="italic"
+        android:visibility="visible"
+        android:padding="5dp"
+        android:clickable="true"
+        android:layout_below="@id/songs_text"
+        android:layout_marginStart="30dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/favorites"
+        android:text="Favorites"
+        android:textSize="20sp"
+        android:textColor="@color/primary_color"
+        android:textStyle="italic"
+        android:padding="5dp"
+        android:clickable="true"
+        android:layout_below="@id/songs_text"
+        android:layout_centerInParent="true"/>
+    <!-- Sort Icon -->
+    <ImageView
+        android:id="@+id/sort_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@id/search_icon"
+        android:src="@drawable/sort" />
+
+    <!-- Sort Text -->
+    <TextView
+        android:id="@+id/sort_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort ascending"
+        android:textColor="@color/secondary_color"
+        android:clickable="true"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/sort_icon" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sort_text"/>
+
+
+
+    <!-- RecyclerView for Songs -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_view"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="100dp"
+        android:layout_below="@id/songs_text" />
+
+    <!-- Now Playing Bar at the Bottom -->
+    <LinearLayout
+        android:id="@+id/now_playing_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary_color"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/now_playing_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Song Title"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:maxLines="1" />
+
+        <ImageView
+            android:id="@+id/now_playing_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/play" />
+    </LinearLayout>
+
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary_color"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white" />
+
+</RelativeLayout>

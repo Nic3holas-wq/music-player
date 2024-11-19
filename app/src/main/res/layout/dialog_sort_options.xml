@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Sorting Options -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort By"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/sort_options_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/sort_date_modified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date Modified" />
+
+        <RadioButton
+            android:id="@+id/sort_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Length of Song" />
+
+        <RadioButton
+            android:id="@+id/sort_alphabetically"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alphabetically" />
+    </RadioGroup>
+
+    <!-- Reverse Order Checkbox -->
+    <CheckBox
+        android:id="@+id/reverse_order_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reverse Order"
+        android:paddingTop="8dp" />
+
+    <!-- OK Button -->
+    <Button
+        android:id="@+id/ok_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
+
+
+
